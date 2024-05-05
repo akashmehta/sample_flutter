@@ -1,9 +1,13 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
-import 'package:sample_flutter/onboarding/src/login/ui/onboarding/infowidgets.dart';
 import '../../../blocs/providers.dart';
+import '../infowidgets.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+
+  final VoidCallback backCallback;
+  const SignUpScreen(Key key, this.backCallback) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,7 @@ class SignUpScreen extends StatelessWidget {
           dlField(bloc),
           spacing(),
           submitButton(() {
-
+            backCallback.call();
           })
         ],
       ),
