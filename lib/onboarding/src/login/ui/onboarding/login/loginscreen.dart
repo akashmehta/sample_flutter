@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../blocs/providers.dart';
 import '../infowidgets.dart';
 
@@ -21,25 +20,29 @@ class LoginScreen extends StatelessWidget {
           mobileField(bloc),
           otpField(bloc),
           spacing(),
-          buttonBar()
+          buttonBar(context)
         ],
       ),
     );
   }
 
-  Widget buttonBar() {
+  Widget buttonBar(BuildContext context) {
     Widget loginButton = submitButton(() {
 
     });
-    Widget signUpButton = submitButton(() {
-
-    });
+    // Widget signUpButton = submitButton(() {
+    //   backCallback() {
+    //     Navigator.pop(context, SignUpScreen);
+    //   }
+    //   Navigator.push(context,
+    //       MaterialPageRoute(builder: (BuildContext context) => SignUpScreen(const Key("SignUp"), backCallback)));
+    // });
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         loginButton,
-        signUpButton
+        // signUpButton
       ],
     );
   }
