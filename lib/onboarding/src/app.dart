@@ -10,7 +10,7 @@ class App extends StatelessWidget {
       child: const MaterialApp(
         title: 'Log Me In',
         home: Scaffold(
-          body: Text("Aakash"),
+          body: LoginScreen(),
         ),
       ),
     );

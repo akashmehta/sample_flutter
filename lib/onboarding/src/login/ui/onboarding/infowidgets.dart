@@ -60,16 +60,16 @@ Widget otpField(Bloc bloc) => StreamBuilder(
       ),
     ));
 
-Widget submitButton(VoidCallback callback) {
+Widget submitButton(String label, VoidCallback callback) {
   return ElevatedButton(
     onPressed: () {
       callback.call();
     },
     style: const ButtonStyle(
         backgroundColor: MaterialStatePropertyAll<Color>(Colors.blue)),
-    child: const Text(
-      'Login',
-      style: TextStyle(color: Colors.white),
+    child: Text(
+      label,
+      style: const TextStyle(color: Colors.white),
     ),
   );
 }
