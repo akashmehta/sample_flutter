@@ -22,7 +22,9 @@ class SignUpScreen extends StatelessWidget {
           aadharNumberField(bloc),
           dlField(bloc),
           spacing(),
-          submitButton()
+          submitButton(() {
+
+          })
         ],
       ),
     );

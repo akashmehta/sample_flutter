@@ -18,11 +18,29 @@ class LoginScreen extends StatelessWidget {
       child: Column (
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          mobileField(bloc),
+          otpField(bloc),
           spacing(),
-          submitButton()
+          buttonBar()
         ],
       ),
     );
   }
 
+  Widget buttonBar() {
+    Widget loginButton = submitButton(() {
+
+    });
+    Widget signUpButton = submitButton(() {
+
+    });
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        loginButton,
+        signUpButton
+      ],
+    );
+  }
 }
